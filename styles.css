@@ -1,0 +1,246 @@
+
+html{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+    margin:0;
+}
+
+body{
+    margin:0;
+    padding:0;
+}
+
+.general-container{
+    width:100%;
+    max-width: 767px;
+    margin: auto;
+}
+
+.logo{
+    text-align: center;
+    height: 50px;
+    vertical-align: middle;
+    line-height: 50px;
+    box-shadow: 0px 2px 3px 0px rgba(0,0,0,0.15);
+}
+
+.logo img{
+    vertical-align: middle;
+    line-height: 50px;
+}
+
+.location{
+    text-align: center;
+    color: #474747;
+    background-color: #f0f0f0;
+    height: 50px;
+    vertical-align: middle;
+    line-height: 50px;
+    font-size: small;
+    position:relative;
+    z-index:-1;
+}
+
+/*fin du css pour le header*/
+
+.intro{
+    display:flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: #f5f5f5;
+}
+
+.intro__heading{
+    text-align: center;
+    font-weight: 900;
+    font-size: 140%;
+    padding-left: 15%;
+    padding-right: 15%;
+}
+
+.intro__description{
+    text-align: center;
+    font-weight: 450;
+}
+
+.intro__button{
+    width: fit-content;
+    margin: auto;
+    padding: 15px 20px 15px 20px;
+    border-radius: 30px;
+    text-align: center;
+    background: rgb(147,86,220);
+    background: linear-gradient(170deg, rgba(255,121,218,1) 0%, rgba(147,86,220,1) 100%);
+    color: white ;
+    font-weight: 500;
+    font-size: 90%;
+    box-shadow: 5px 5px 15px 0px rgba(0,0,0,0.24) ;
+    margin-top: 10px;
+    margin-bottom: 40px;
+}
+
+/* fin du css pour l'intro*/
+
+.fonctionnement{
+    padding-left: 10px;
+}
+
+.list{
+    list-style: none;
+    padding: 10px;
+}
+
+.list__item{
+    width: 90%;
+    margin: auto;
+    background-color: #f5f5f5;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0px 5px 15px 0px rgba(0,0,0,0.24);
+    margin-bottom: 30px;
+}
+
+.push-left{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+    right: 30px;
+}
+
+.push-left > * {
+    margin-right: 10%;
+}
+
+.list__item--puce{
+    background-color: rgb(147,86,220);
+    height: 1.4rem;
+    width: 1.4rem;
+    border-radius: 100%;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 1.5rem;
+    color: white;
+    font-weight: 400;
+}
+
+.list__item-icone{
+    color: #6f6a63;
+    font-size: 120%;
+}
+
+/*fin du css pour la section fonctionnement*/
+
+main{
+    margin-left: 3%;
+    margin-right: 3%;
+}
+
+.carte{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    border-radius: 18px;
+    box-shadow: 0px 5px 15px 0px rgba(0,0,0,0.24);
+    margin-bottom: 3em;
+    background-color: white;
+    overflow: auto;
+    transition: all 0.3s;
+}
+
+.carte__photo{
+    margin-left: 0;
+    border-radius: 18px 18px 0 0;
+    height: 160px;
+    overflow: hidden;
+    background-position: center;
+    background-size:cover;
+}
+
+.photo1{
+    background-image: url("images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg")
+}
+
+.photo2{
+    background-image: url("images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg");
+}
+
+.photo3{
+    background-image: url("images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg")
+}
+
+.photo4{
+    background-image: url("images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg")
+}
+
+.nouveau{
+    float: right;
+    padding: 8px 10px 8px 10px;
+    background-color: #b0f0d4;
+    color: #009c58;
+    position: relative;
+    top: 15px;
+    right: 15px;
+    border-radius: 2px;
+    font-size: 80%;
+    font-weight: 600;
+}
+
+.carte__texte{
+    margin-left: 10px;
+    height: 100%;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    font-size: 110%;
+}
+
+.carte__texte--float-right{
+    float: right;
+    position: relative;
+    right: 20px;
+    top: 10px;
+    font-size: 120%;
+}
+
+.carte__texte--bold{
+    font-weight: 700;
+}
+
+.carte__texte--regular{
+    margin-top: 10px;
+    font-weight: 400;
+}
+
+/* fin du css pour la section main*/
+
+.footer{
+    background-color: #525252;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    padding-left: 4%;
+}
+
+.footer__h2{
+    font-family: 'Shrikhand', cursive;
+    font-weight: 200;
+    font-size: 120%;
+}
+
+.footer__liste{
+    list-style: none;
+    padding-left: 0;
+}
+
+.footer__liste li{
+    margin-bottom: 10px;
+    font-weight: 400;
+    display: flex;
+}
+
+.footer__liste li i {
+    width: 30px;
+}
+
+/* fin du css pour le footer*/
