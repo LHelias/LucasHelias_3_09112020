@@ -1,4 +1,22 @@
 @charset "UTF-8";
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes slide-in-bottom {
+  0% {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
 html {
   font-family: "Roboto", sans-serif;
   font-weight: 600;
@@ -25,15 +43,49 @@ body {
   max-width: 767px;
   margin: auto;
   background-color: #fafafa;
+  animation: fade-in 400ms ease-in-out both;
+  animation-delay: 800ms;
+}
+
+a {
+  color: inherit;
+  text-decoration: inherit;
 }
 
 /*fin du css général de la page*/
 #accueil {
   display: contents;
+  animation: fade-in 400ms ease-in-out both;
 }
 
-#menu1 {
+#menu1, #menu2, #menu3, #menu4 {
   display: none;
+}
+
+/* propriétés pour afficher les icones coeurs animées*/
+.outer-heart {
+  z-index: 3;
+  transition: color 300ms, transform 150ms;
+}
+.outer-heart:hover {
+  color: #663057;
+  cursor: pointer;
+}
+.outer-heart:hover + .inside-heart {
+  color: #FF79DA;
+  filter: drop-shadow(0px 0px 5px rgba(255, 121, 218, 0.8));
+}
+.outer-heart:active {
+  transform: scale(1.2);
+}
+.outer-heart:active + .inside-heart {
+  transform: scale(1.2);
+}
+
+.inside-heart {
+  color: rgba(255, 121, 218, 0);
+  z-index: 2;
+  transition: color 300ms, transform 150ms;
 }
 
 .logo {
@@ -94,6 +146,7 @@ body {
   padding-right: 5%;
 }
 .intro__button {
+  max-width: 50%;
   width: fit-content;
   min-width: 150px;
   margin: auto;
@@ -105,14 +158,20 @@ body {
   color: #ffffff;
   font-weight: 500;
   font-size: 100%;
+  transition: all 150ms;
+  cursor: pointer;
   box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.15);
   margin-top: 10px;
   margin-bottom: 40px;
+}
+.intro__button:active {
+  transform: scale(1.2);
 }
 
 /* fin du css pour l'intro*/
 .fonctionnement {
   padding-left: 10px;
+  animation: slide-in-bottom 400ms ease-in-out both;
 }
 
 .list {
@@ -127,6 +186,7 @@ body {
   padding: 20px;
   border-radius: 15px;
   margin-bottom: 30px;
+  transition: all 200ms;
 }
 .list__item--puce {
   background-color: #9356DC;
@@ -152,6 +212,9 @@ body {
 }
 .list__item--push-left > * {
   margin-right: 10%;
+}
+.list__item:hover {
+  background-color: rgba(147, 86, 220, 0.2);
 }
 
 .push-left {
@@ -182,6 +245,7 @@ main {
   overflow: auto;
   transition: all 0.3s;
   box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.15);
+  animation: slide-in-bottom 400ms ease-in-out both;
 }
 .carte__photo {
   margin-left: 0;
@@ -202,7 +266,6 @@ main {
   float: right;
   position: relative;
   right: 20px;
-  top: 10px;
   font-size: 120%;
 }
 .carte__texte--bold {
@@ -248,6 +311,10 @@ main {
   font-weight: 400;
   display: flex;
 }
+.footer__liste li:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
 .footer__liste li i {
   width: 30px;
 }
@@ -260,6 +327,7 @@ main {
 }
 
 .carte-menu {
+  animation: slide-in-bottom 400ms ease-in-out both;
   display: flex;
   justify-content: space-between;
   align-items: stretch;
@@ -295,13 +363,16 @@ main {
 .carte-menu__ligne-basse--regular {
   font-weight: 400;
   width: 0px;
+  /*étrangement, pour que la largeur de --regular s'adapte au contenu avec white-space: nowrap, ça ne marche qu'avec n'importe quelle valeur absolue arbitraire ici*/
   flex: 1 1 auto;
   overflow-x: hidden;
+  /*ici, l'overflow texte est transformé en "..."*/
   text-overflow: ellipsis;
   white-space: nowrap;
 }
 .carte-menu__ligne-basse--prix {
   align-self: flex-end;
+  /*positionne le prix en bas de son conteneur*/
 }
 .carte-menu h4 {
   margin-top: 0;
@@ -336,6 +407,15 @@ main {
 .carte-menu__anim:hover i {
   transform: translate(-50%, -50%) rotate(360deg);
   left: 50%;
+}
+
+.animation-delay1 {
+  animation-delay: 150ms;
+  /* des classes pour ajouter un délai de déclenchement d'animation de fade-in/slide-in */
+}
+
+.animation-delay2 {
+  animation-delay: 300ms;
 }
 
 /*fin du css pour les cartes-menu*/
@@ -373,6 +453,7 @@ main {
   padding-left: 0;
 }
 .menu-main__button {
+  max-width: 50%;
   width: fit-content;
   min-width: 150px;
   margin: auto;
@@ -384,8 +465,13 @@ main {
   color: #ffffff;
   font-weight: 500;
   font-size: 100%;
+  transition: all 150ms;
+  cursor: pointer;
   margin-top: 50px;
   margin-bottom: 30px;
+}
+.menu-main__button:active {
+  transform: scale(1.2);
 }
 
 /*# sourceMappingURL=styles.css.map */

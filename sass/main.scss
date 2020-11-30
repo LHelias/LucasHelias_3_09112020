@@ -16,6 +16,7 @@ $font-medium:600;
     box-shadow: 0px 2px 3px 0px rgba(0,0,0,0.15);
 }
 @mixin button{
+    max-width: 50%;
     width: fit-content;
     min-width: 150px;
     margin: auto;
@@ -27,6 +28,11 @@ $font-medium:600;
     color: $couleur-font-claire ;
     font-weight: 500;
     font-size: 100%;
+    transition: all 150ms;
+    cursor: pointer;
+    &:active{
+        transform: scale(1.2);
+    }
 }
 
 @mixin flex-vertical{
@@ -49,6 +55,35 @@ $font-medium:600;
     left: 50%;
 }
 
+
+@mixin fade-in{
+    animation: fade-in 400ms ease-in-out both;
+}
+
+@mixin slide-in-bottom{
+    animation: slide-in-bottom 400ms ease-in-out both;
+}
+
+@keyframes fade-in{
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes slide-in-bottom {
+    0% {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
 html{
     font-family: 'Roboto', sans-serif;
     font-weight: $font-medium;
@@ -68,14 +103,49 @@ body{
     max-width: 767px;
     margin: auto;
     background-color: $fond-medium;
+    @include fade-in;
+    animation-delay: 800ms;
 }
+
+a{
+    color: inherit;
+    text-decoration: inherit;
+}
+
 /*fin du css général de la page*/
 #accueil{
     display: contents;
+    @include fade-in;
 }
 
 #menu1{
     display: none;
+}
+/* propriétés pour afficher les icones coeurs animées*/
+.outer-heart{
+    z-index: 3;
+    transition: color 300ms, transform 150ms;
+    &:hover{
+        color: mix($couleur-secondaire, #000000, 40%);
+        cursor: pointer;
+    }
+    
+    &:hover + .inside-heart{
+        color: $couleur-secondaire;
+        filter:drop-shadow(0px 0px 5px transparentize($couleur-secondaire, 0.2));
+    }
+    &:active{
+        transform: scale(1.2);
+        & + .inside-heart{
+            transform: scale(1.2);
+        }
+    }
+}
+
+.inside-heart{
+    color: transparentize($couleur-secondaire, 1);
+    z-index: 2;
+    transition: color 300ms, transform 150ms;
 }
 
 .logo{ /*la classe logo est utilisée pour les headers de accueil des des menus*/
@@ -144,6 +214,7 @@ body{
 
 .fonctionnement{
     padding-left: 10px;
+    @include slide-in-bottom;
 }
 
 .list{
@@ -157,6 +228,7 @@ body{
         padding: 20px;
         border-radius: 15px;
         margin-bottom: 30px;
+        transition: all 200ms;
         &--puce{
             background-color: $couleur-primaire;
             height: 1.4rem;
@@ -181,6 +253,9 @@ body{
             & >*{
             margin-right: 10%;
             }
+        }
+        &:hover{
+            background-color: transparentize($couleur-primaire, 0.8);
         }
     }
 }
@@ -212,6 +287,7 @@ main{
     overflow: auto;
     transition: all 0.3s;
     @include card-shadow;
+    @include slide-in-bottom;
     &__photo{
         margin-left: 0;
         border-radius: 18px 18px 0 0;
@@ -229,7 +305,6 @@ main{
             float: right;
             position: relative;
             right: 20px;
-            top: 10px;
             font-size: 120%;
         }
         &--bold{
@@ -275,6 +350,10 @@ main{
         margin-bottom: 10px;
         font-weight: $font-regular;
         display: flex;
+        &:hover{
+            cursor: pointer;
+            text-decoration: underline;
+        }
             & i{
                 width: 30px;
             }
@@ -289,6 +368,7 @@ main{
 }
 
 .carte-menu{
+    animation: slide-in-bottom 400ms ease-in-out both;
     display: flex;
     justify-content: space-between;
     align-items: stretch;
@@ -317,14 +397,14 @@ main{
         align-items: center;
         &--regular{
             font-weight: $font-regular;
-            width: 0px;
+            width: 0px; /*étrangement, pour que la largeur de --regular s'adapte au contenu avec white-space: nowrap, ça ne marche qu'avec n'importe quelle valeur absolue arbitraire ici*/
             flex: 1 1 auto;
-            overflow-x: hidden;
+            overflow-x: hidden; /*ici, l'overflow texte est transformé en "..."*/
             text-overflow: ellipsis;
             white-space: nowrap;
         }
         &--prix{
-            align-self: flex-end;
+            align-self: flex-end; /*positionne le prix en bas de son conteneur*/
         }
     }
     & h4{
@@ -358,6 +438,13 @@ main{
             }
         }
     }
+}
+
+.animation-delay1{
+    animation-delay: 150ms; /* des classes pour ajouter un délai de déclenchement d'animation de fade-in/slide-in */ 
+}
+.animation-delay2{
+    animation-delay: 300ms;
 }
 /*fin du css pour les cartes-menu*/
 
