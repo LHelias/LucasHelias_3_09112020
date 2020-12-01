@@ -58,7 +58,7 @@ a {
   animation: fade-in 400ms ease-in-out both;
 }
 
-#menu1, #menu2, #menu3, #menu4 {
+#menu1 {
   display: none;
 }
 
@@ -369,6 +369,11 @@ main {
   /*ici, l'overflow texte est transformé en "..."*/
   text-overflow: ellipsis;
   white-space: nowrap;
+}
+@media (max-width: 768px) {
+  .carte-menu__ligne-basse--regular {
+    font-size: 90%;
+  }
 }
 .carte-menu__ligne-basse--prix {
   align-self: flex-end;

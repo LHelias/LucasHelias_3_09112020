@@ -402,6 +402,9 @@ main{
             overflow-x: hidden; /*ici, l'overflow texte est transformé en "..."*/
             text-overflow: ellipsis;
             white-space: nowrap;
+            @media (max-width: 768px){
+                font-size: 90%;
+            }
         }
         &--prix{
             align-self: flex-end; /*positionne le prix en bas de son conteneur*/
