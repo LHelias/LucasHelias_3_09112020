@@ -58,7 +58,7 @@ a {
   animation: fade-in 400ms ease-in-out both;
 }
 
-#menu1 {
+#menu1, #menu2, #menu3, #menu4 {
   display: none;
 }
 
