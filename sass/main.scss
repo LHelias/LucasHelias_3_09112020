@@ -55,7 +55,6 @@ $font-medium:600;
     left: 50%;
 }
 
-
 @mixin fade-in{
     animation: fade-in 400ms ease-in-out both;
 }
@@ -199,7 +198,7 @@ a{
     }
     &__description{
         text-align: center;
-        font-weight: 450;
+        font-weight: $font-regular;
         padding-left: 5%;
         padding-right: 5%;
     }
