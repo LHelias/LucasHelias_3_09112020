@@ -1,20 +1,22 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
     <head>
+        
         <title>Ohmyfood</title>
         <meta name="viewport" content="initial-scale=1.0, user-scalable=yes" />
         <meta charset="UTF-8">
-        <script src="https://kit.fontawesome.com/a3d09c483d.js" crossorigin="anonymous"></script>
+        <link href="fontawesome-free-5.15.1-web/css/all.css" rel="stylesheet">
         <link href="styles.css" rel="stylesheet">
         <link href="bg-images.css" rel="stylesheet"> <!--Inclus les background-images des elements carte__photo -->
         <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
         <script></script>
     </head>
     <body>
+        <div class="spinner fa-3x">
+            <i class="fas fa-spinner fa-pulse"></i>
+        </div>
         <div class="general-container">
-            <div id="accueil">
+            <div id="accueil" class="fade-in">
                 <header>
                     <div class="logo"><a href="index.html"><img src="images/logo/ohmyfood@2x.svg" alt="logo de Ohmyfood"/></a>
                     </div>
@@ -22,7 +24,7 @@
                 </header>
     
                 <section class="intro">
-                    <p class="intro__heading">R&eacute;servez le menu qui vous convient</p>
+                    <h1 class="intro__heading">R&eacute;servez le menu qui vous convient</h1>
                     <p class="intro__description">D&eacute;couvrez des restaurants d'exception, s&eacute;lectionn&eacute;s par nos soins.</p>
                     <div class="intro__button">Explorer nos restaurants</div>
                 </section>
@@ -56,8 +58,8 @@
     
                 <main>
                     <h2>Restaurants</h2>
-                    <a href="#menu1">
-                        <div class="carte" onclick="showMenu1()">
+                    <a href="menu1.html">
+                        <div class="carte">
                             <div class="carte__photo img-restaurant1">
                                 <div class="nouveau">Nouveau</div>
                             </div>

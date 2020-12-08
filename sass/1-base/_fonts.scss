@@ -1,0 +1,31 @@
+/* roboto-regular - latin */
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    src: url('fonts/roboto-v20-latin-regular.eot'); /* IE9 Compat Modes */
+    src: local(''),
+         url('fonts/roboto-v20-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('fonts/roboto-v20-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+         url('fonts/roboto-v20-latin-regular.woff') format('woff'), /* Modern Browsers */
+         url('fonts/roboto-v20-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('fonts/roboto-v20-latin-regular.svg#Roboto') format('svg'); /* Legacy iOS */
+}
+
+/* shrikhand-regular - latin */
+@font-face {
+    font-family: 'Shrikhand';
+    font-style: normal;
+    font-weight: 400;
+    src: url('fonts/shrikhand-v6-latin-regular.eot'); /* IE9 Compat Modes */
+    src: local(''),
+         url('fonts/shrikhand-v6-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('fonts/shrikhand-v6-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+         url('fonts/shrikhand-v6-latin-regular.woff') format('woff'), /* Modern Browsers */
+         url('fonts/shrikhand-v6-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('fonts/shrikhand-v6-latin-regular.svg#Shrikhand') format('svg'); /* Legacy iOS */
+}
+
+$font-regular: 400;
+$font-bold: 700;
+$font-medium:600;

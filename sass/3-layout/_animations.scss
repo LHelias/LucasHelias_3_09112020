@@ -1,0 +1,67 @@
+@mixin rotation-check{
+    transform: translate(-50%,-50%) rotate(360deg);
+    left: 50%;
+}
+
+@mixin fade-in{
+    animation: fade-in 400ms ease-in-out both;
+}
+
+@mixin slide-in-bottom{
+    animation: slide-in-bottom 400ms ease-in-out both;
+}
+
+@keyframes fade-in{
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fade-out {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        z-index: -1;
+    }
+}
+
+@keyframes slide-in-bottom {
+    0% {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.outer-heart{
+    transition: color 300ms, transform 500ms;
+}
+
+.inside-heart{
+    transition: color 300ms, transform 500ms;
+}
+
+.animation-delay1{
+    animation-delay: 150ms; /* des classes pour ajouter un délai de déclenchement d'animation de fade-in/slide-in */ 
+}
+.animation-delay2{
+    animation-delay: 300ms;
+}
+
+/*.fade-in{
+    @include slide-in-bottom();
+    animation-delay: 5s;
+}*/
+
+.spinner{
+    animation: fade-out 400ms ease-in-out both;
+    animation-delay: $delai-apparition-accueil ;
+}

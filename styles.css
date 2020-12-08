@@ -1,21 +1,23 @@
 @charset "UTF-8";
-@keyframes fade-in {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
+/* roboto-regular - latin */
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  src: url("fonts/roboto-v20-latin-regular.eot");
+  /* IE9 Compat Modes */
+  src: local(""), url("fonts/roboto-v20-latin-regular.eot?#iefix") format("embedded-opentype"), url("fonts/roboto-v20-latin-regular.woff2") format("woff2"), url("fonts/roboto-v20-latin-regular.woff") format("woff"), url("fonts/roboto-v20-latin-regular.ttf") format("truetype"), url("fonts/roboto-v20-latin-regular.svg#Roboto") format("svg");
+  /* Legacy iOS */
 }
-@keyframes slide-in-bottom {
-  0% {
-    transform: translateY(20px);
-    opacity: 0;
-  }
-  100% {
-    transform: translateY(0);
-    opacity: 1;
-  }
+/* shrikhand-regular - latin */
+@font-face {
+  font-family: "Shrikhand";
+  font-style: normal;
+  font-weight: 400;
+  src: url("fonts/shrikhand-v6-latin-regular.eot");
+  /* IE9 Compat Modes */
+  src: local(""), url("fonts/shrikhand-v6-latin-regular.eot?#iefix") format("embedded-opentype"), url("fonts/shrikhand-v6-latin-regular.woff2") format("woff2"), url("fonts/shrikhand-v6-latin-regular.woff") format("woff"), url("fonts/shrikhand-v6-latin-regular.ttf") format("truetype"), url("fonts/shrikhand-v6-latin-regular.svg#Shrikhand") format("svg");
+  /* Legacy iOS */
 }
 html {
   font-family: "Roboto", sans-serif;
@@ -38,56 +40,78 @@ body {
   /* Internet Explorer/Edge */
 }
 
-.general-container {
-  width: 100%;
-  max-width: 767px;
-  margin: auto;
-  background-color: #fafafa;
-  animation: fade-in 400ms ease-in-out both;
-  animation-delay: 800ms;
-}
-
 a {
   color: inherit;
   text-decoration: inherit;
 }
 
-/*fin du css général de la page*/
 #accueil {
   display: contents;
-  animation: fade-in 400ms ease-in-out both;
 }
 
-#menu1, #menu2, #menu3, #menu4 {
-  display: none;
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
-
-/* propriétés pour afficher les icones coeurs animées*/
+@keyframes fade-out {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    z-index: -1;
+  }
+}
+@keyframes slide-in-bottom {
+  0% {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
 .outer-heart {
-  z-index: 3;
-  transition: color 300ms, transform 150ms;
-}
-.outer-heart:hover {
-  color: #663057;
-  cursor: pointer;
-}
-.outer-heart:hover + .inside-heart {
-  color: #FF79DA;
-  filter: drop-shadow(0px 0px 5px rgba(255, 121, 218, 0.8));
-}
-.outer-heart:active {
-  transform: scale(1.2);
-}
-.outer-heart:active + .inside-heart {
-  transform: scale(1.2);
+  transition: color 300ms, transform 500ms;
 }
 
 .inside-heart {
-  color: rgba(255, 121, 218, 0);
-  z-index: 2;
-  transition: color 300ms, transform 150ms;
+  transition: color 300ms, transform 500ms;
 }
 
+.animation-delay1 {
+  animation-delay: 150ms;
+  /* des classes pour ajouter un délai de déclenchement d'animation de fade-in/slide-in */
+}
+
+.animation-delay2 {
+  animation-delay: 300ms;
+}
+
+/*.fade-in{
+    @include slide-in-bottom();
+    animation-delay: 5s;
+}*/
+.spinner {
+  animation: fade-out 400ms ease-in-out both;
+  animation-delay: 1500ms;
+}
+
+.general-container {
+  width: 100%;
+  max-width: 767px;
+  margin: auto;
+  background-color: #fafafa;
+  /*@include fade-in;
+  animation-delay: 800ms;*/
+}
+
+/*début du css pour le header*/
 .logo {
   /*la classe logo est utilisée pour les headers de accueil des des menus*/
   text-align: center;
@@ -125,7 +149,7 @@ a {
   z-index: 1;
 }
 
-/*fin du css pour le header*/
+/* fin du css pour le header*/
 .intro {
   display: flex;
   flex-direction: column;
@@ -153,7 +177,6 @@ a {
   padding: 15px 20px 15px 20px;
   border-radius: 30px;
   text-align: center;
-  background: #9356dc;
   background: linear-gradient(170deg, #FF79DA 0%, #9356DC 100%);
   color: #ffffff;
   font-weight: 500;
@@ -168,7 +191,7 @@ a {
   transform: scale(1.2);
 }
 
-/* fin du css pour l'intro*/
+/* début du code de la section fonctionnement*/
 .fonctionnement {
   padding-left: 10px;
   animation: slide-in-bottom 400ms ease-in-out both;
@@ -228,7 +251,7 @@ a {
   margin-right: 10%;
 }
 
-/*fin du css pour la section fonctionnement*/
+/* fin du code de la section fontionnement*/
 main {
   margin-left: 3%;
   margin-right: 3%;
@@ -276,20 +299,6 @@ main {
   font-weight: 400;
 }
 
-.nouveau {
-  float: right;
-  padding: 8px 10px 8px 10px;
-  background-color: #99E2D0;
-  color: #009c58;
-  position: relative;
-  top: 15px;
-  right: 5%;
-  border-radius: 2px;
-  font-size: 80%;
-  font-weight: 600;
-}
-
-/* fin du css pour la section main*/
 .footer {
   background-color: #525252;
   color: #ffffff;
@@ -317,13 +326,6 @@ main {
 }
 .footer__liste li i {
   width: 30px;
-}
-
-.menu-img {
-  height: 300px;
-  width: 100%;
-  background-position: center;
-  background-size: cover;
 }
 
 .carte-menu {
@@ -414,16 +416,6 @@ main {
   left: 50%;
 }
 
-.animation-delay1 {
-  animation-delay: 150ms;
-  /* des classes pour ajouter un délai de déclenchement d'animation de fade-in/slide-in */
-}
-
-.animation-delay2 {
-  animation-delay: 300ms;
-}
-
-/*fin du css pour les cartes-menu*/
 .menu-main {
   border-radius: 34px 34px 0 0;
   padding-left: 3%;
@@ -465,7 +457,6 @@ main {
   padding: 15px 20px 15px 20px;
   border-radius: 30px;
   text-align: center;
-  background: #9356dc;
   background: linear-gradient(170deg, #FF79DA 0%, #9356DC 100%);
   color: #ffffff;
   font-weight: 500;
@@ -477,6 +468,65 @@ main {
 }
 .menu-main__button:active {
   transform: scale(1.2);
+}
+
+.nouveau {
+  float: right;
+  padding: 8px 10px 8px 10px;
+  background-color: #99E2D0;
+  color: #009c58;
+  position: relative;
+  top: 15px;
+  right: 5%;
+  border-radius: 2px;
+  font-size: 80%;
+  font-weight: 600;
+}
+
+.menu-img {
+  height: 300px;
+  width: 100%;
+  background-position: center;
+  background-size: cover;
+}
+
+.outer-heart {
+  z-index: 3;
+}
+.outer-heart:hover {
+  color: #663057;
+  cursor: pointer;
+}
+.outer-heart:hover + .inside-heart {
+  transform: scale(1);
+  color: #FF79DA;
+  filter: drop-shadow(0px 0px 5px rgba(255, 121, 218, 0.8));
+}
+.outer-heart:active {
+  transform: scale(1.2);
+}
+.outer-heart:active + .inside-heart {
+  transform: scale(1.2);
+}
+
+.inside-heart {
+  transform: scale(0);
+  color: rgba(255, 121, 218, 0);
+  z-index: 2;
+}
+
+.spinner {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 3;
+}
+.spinner i {
+  color: #9356DC;
 }
 
 /*# sourceMappingURL=styles.css.map */
