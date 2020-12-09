@@ -3,8 +3,6 @@
     max-width: 767px;
     margin: auto;
     background-color: $fond-medium;
-    /*@include fade-in;
-    animation-delay: 800ms;*/
 }
 
 
@@ -74,6 +72,7 @@
 /* début du code de la section fonctionnement*/
 .fonctionnement{
     padding-left: 10px;
+    padding-right: 5px;
     @include slide-in-bottom;
 }
 
@@ -133,7 +132,7 @@
 
 /* fin du code de la section fontionnement*/
 
-main{
+.accueil-main{
     margin-left: 3%;
     margin-right: 3%;
 }
@@ -250,7 +249,8 @@ main{
             align-self: flex-end; /*positionne le prix en bas de son conteneur*/
         }
     }
-    & h4{
+    & h3{
+        font-size: medium;
         margin-top: 0;
         margin-bottom: 5px;
     }
@@ -283,6 +283,19 @@ main{
     }
 }
 
+
+
+.animation-delay1{
+    animation-delay: 150ms; /* des classes pour ajouter un délai de déclenchement d'animation de fade-in/slide-in */ 
+}
+.animation-delay2{
+    animation-delay: 300ms;
+}
+
+.animation-delay3{
+    animation-delay: 750ms;
+}
+
 .menu-main{
     border-radius: 34px 34px 0 0;
     padding-left: 3%;
@@ -302,8 +315,10 @@ main{
         }
     }
     &__sous-titre{
+        font-size: medium;
         font-weight: $font-regular;
         margin-bottom: 4px;
+        margin-top: 1.5em;
     }
     &__spacer{
         height: 2px;

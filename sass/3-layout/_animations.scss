@@ -3,8 +3,8 @@
     left: 50%;
 }
 
-@mixin fade-in{
-    animation: fade-in 400ms ease-in-out both;
+@mixin fade-in($delay){
+    animation: fade-in 400ms ease-in-out $delay both;
 }
 
 @mixin slide-in-bottom{
@@ -48,18 +48,6 @@
 .inside-heart{
     transition: color 300ms, transform 500ms;
 }
-
-.animation-delay1{
-    animation-delay: 150ms; /* des classes pour ajouter un délai de déclenchement d'animation de fade-in/slide-in */ 
-}
-.animation-delay2{
-    animation-delay: 300ms;
-}
-
-/*.fade-in{
-    @include slide-in-bottom();
-    animation-delay: 5s;
-}*/
 
 .spinner{
     animation: fade-out 400ms ease-in-out both;

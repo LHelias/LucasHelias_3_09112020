@@ -84,19 +84,6 @@ a {
   transition: color 300ms, transform 500ms;
 }
 
-.animation-delay1 {
-  animation-delay: 150ms;
-  /* des classes pour ajouter un délai de déclenchement d'animation de fade-in/slide-in */
-}
-
-.animation-delay2 {
-  animation-delay: 300ms;
-}
-
-/*.fade-in{
-    @include slide-in-bottom();
-    animation-delay: 5s;
-}*/
 .spinner {
   animation: fade-out 400ms ease-in-out both;
   animation-delay: 1500ms;
@@ -107,8 +94,6 @@ a {
   max-width: 767px;
   margin: auto;
   background-color: #fafafa;
-  /*@include fade-in;
-  animation-delay: 800ms;*/
 }
 
 /*début du css pour le header*/
@@ -194,6 +179,7 @@ a {
 /* début du code de la section fonctionnement*/
 .fonctionnement {
   padding-left: 10px;
+  padding-right: 5px;
   animation: slide-in-bottom 400ms ease-in-out both;
 }
 
@@ -252,7 +238,7 @@ a {
 }
 
 /* fin du code de la section fontionnement*/
-main {
+.accueil-main {
   margin-left: 3%;
   margin-right: 3%;
 }
@@ -381,7 +367,8 @@ main {
   align-self: flex-end;
   /*positionne le prix en bas de son conteneur*/
 }
-.carte-menu h4 {
+.carte-menu h3 {
+  font-size: medium;
   margin-top: 0;
   margin-bottom: 5px;
 }
@@ -416,6 +403,19 @@ main {
   left: 50%;
 }
 
+.animation-delay1 {
+  animation-delay: 150ms;
+  /* des classes pour ajouter un délai de déclenchement d'animation de fade-in/slide-in */
+}
+
+.animation-delay2 {
+  animation-delay: 300ms;
+}
+
+.animation-delay3 {
+  animation-delay: 750ms;
+}
+
 .menu-main {
   border-radius: 34px 34px 0 0;
   padding-left: 3%;
@@ -437,8 +437,10 @@ main {
   margin-right: 20px;
 }
 .menu-main__sous-titre {
+  font-size: medium;
   font-weight: 400;
   margin-bottom: 4px;
+  margin-top: 1.5em;
 }
 .menu-main__spacer {
   height: 2px;
@@ -488,6 +490,7 @@ main {
   width: 100%;
   background-position: center;
   background-size: cover;
+  animation: fade-in 400ms ease-in-out 400ms both;
 }
 
 .outer-heart {
@@ -510,20 +513,21 @@ main {
 }
 
 .inside-heart {
+  color: #ffffff;
   transform: scale(0);
-  color: rgba(255, 121, 218, 0);
   z-index: 2;
+  animation: fade-in 400ms ease-in-out 300ms both;
 }
 
 .spinner {
-  position: absolute;
+  position: fixed;
   width: 100%;
   height: 100%;
   background-color: white;
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 3;
+  z-index: 4;
 }
 .spinner i {
   color: #9356DC;

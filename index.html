@@ -5,16 +5,15 @@
         <title>Ohmyfood</title>
         <meta name="viewport" content="initial-scale=1.0, user-scalable=yes" />
         <meta charset="UTF-8">
-        <link href="fontawesome-free-5.15.1-web/css/all.css" rel="stylesheet">
-        <link href="styles.css" rel="stylesheet">
-        <link href="bg-images.css" rel="stylesheet"> <!--Inclus les background-images des elements carte__photo -->
-        <link rel="preconnect" href="https://fonts.gstatic.com">
-        <script></script>
+        <link type="text/css" href="fontawesome-free-5.15.1-web/css/all.css" rel="stylesheet">
+        <link type="text/css" href="bg-images.css" rel="stylesheet"> <!--Inclus les background-images des elements carte__photo -->
+        <link type="text/css" href="styles.css" rel="stylesheet">
     </head>
     <body>
         <div class="spinner fa-3x">
             <i class="fas fa-spinner fa-pulse"></i>
         </div>
+
         <div class="general-container">
             <div id="accueil" class="fade-in">
                 <header>
@@ -56,7 +55,7 @@
                         </ul>
                 </section>
     
-                <main>
+                <main class="accueil-main">
                     <h2>Restaurants</h2>
                     <a href="menu1.html">
                         <div class="carte">
@@ -74,7 +73,7 @@
                             </div>
                         </div>
                     </a>
-                    <a href="#menu2">
+                    <a href="menu2.html">
                         <div class="carte" onclick="showMenu2()">
                             <div class="carte__photo img-restaurant2">
                                 <div class="nouveau">Nouveau</div>
@@ -89,9 +88,9 @@
                             </div>
                         </div>
                     </a>
-                    <a href="#menu3">
-                        <div class="carte" onclick="showMenu3()">
-                            <div class="carte__photo img-restaurant3" style="background-image: url(images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg);">
+                    <a href="menu3.html">
+                        <div class="carte">
+                            <div class="carte__photo img-restaurant3">
                             </div>
                             <div class="carte__texte">
                                 <span class="fa-stack carte__texte--float-right">
@@ -103,7 +102,7 @@
                             </div>
                         </div>
                     </a>
-                    <a href="#menu4">
+                    <a href="menu4.html">
                         <div class="carte" onclick="showMenu4()">
                             <div class="carte__photo img-restaurant4">
                             </div>
@@ -120,531 +119,6 @@
                 </main>
             </div>
 
-            <!-- fin de la page d'accueil, debut du menu1-->
-
-            <div id="menu1">
-                <header>
-                    <div class="logo">
-                        <a href="#accueil" class="logo__back-link" onclick="showAccueil()"><i class="fas fa-arrow-left"></i></a>
-                        <img class="logo__logo" src="images/logo/ohmyfood@2x.svg" alt="logo de Ohmyfood"/>
-                    </div>
-                </header>
-    
-                <div class="menu-img center-bg-img img-restaurant1">
-                </div>
-                
-                <div class="menu-main">
-                    <h2 class="menu-main__titre">La palette du go&ucirc;t
-                        <span class="fa-stack">
-                            <i class="fa-stack-1x far fa-heart outer-heart"></i>
-                            <i class=" fa-stack-1x fas fa-heart inside-heart"></i>
-                        </span>
-                    </h2>
-                    <h4 class="menu-main__sous-titre">ENTR&Eacute;ES</h4>
-                    <div class="menu-main__spacer"></div>
-                    <ul class="menu-main__liste">
-                        <li class="carte-menu">
-                            <div class="carte-menu__texte">
-                                <h4>Fricass&eacute;e d'escargot</h4>
-                                <div class="carte-menu__ligne-basse">
-                                    <div class="carte-menu__ligne-basse--regular">Au piment d'Espelette</div>
-                                    <div class="carte-menu__ligne-basse--prix">25&euro;</div>
-                                </div>
-                            </div>
-                            <div class=carte-menu__anim><i class="fas fa-check"></i></div>
-                        </li>
-                        <li class="carte-menu animation-delay1">
-                            <div class="carte-menu__texte">
-                                <h4>Foie gras de canard mi-cuit</h4>
-                                <div class="carte-menu__ligne-basse">
-                                    <div class="carte-menu__ligne-basse--regular">Et ses copeaux de truffe noire</div>
-                                    <div class="carte-menu__ligne-basse--prix">35&euro;</div>
-                                </div>
-                            </div>
-                            <div class=carte-menu__anim><i class="fas fa-check"></i></div>
-                        </li>
-                        <li class="carte-menu animation-delay2">
-                            <div class="carte-menu__texte">
-                                <h4>Oeuf au plat</h4>
-                                <div class="carte-menu__ligne-basse">
-                                    <div class="carte-menu__ligne-basse--regular">Assaisonn&eacute; &agrave; la truffe sur lit de caviar</div>
-                                    <div class="carte-menu__ligne-basse--prix">20&euro;</div>
-                                </div>
-                            </div>
-                            <div class=carte-menu__anim><i class="fas fa-check"></i></div>
-                        </li>
-                    </ul>
-    
-                    <h4 class="menu-main__sous-titre">PLATS</h4>
-                    <div class="menu-main__spacer"></div>
-                    <ul class="menu-main__liste">
-                        <li class="carte-menu">
-                            <div class="carte-menu__texte">
-                                <h4>Filet de boeuf aux herbes</h4>
-                                <div class="carte-menu__ligne-basse">
-                                    <div class="carte-menu__ligne-basse--regular">Accompagn&eacute; de sa ribambelle de l&eacute;gumes</div>
-                                    <div class="carte-menu__ligne-basse--prix">40&euro;</div>
-                                </div>
-                            </div>
-                            <div class=carte-menu__anim><i class="fas fa-check"></i></div>
-                        </li>
-                        <li class="carte-menu animation-delay1">
-                            <div class="carte-menu__texte">
-                                <h4>Parmentier de queue de boeuf</h4>
-                                <div class="carte-menu__ligne-basse">
-                                    <div class="carte-menu__ligne-basse--regular">&Agrave; la truffe noire sur sa pur&eacute;e de panais</div>
-                                    <div class="carte-menu__ligne-basse--prix">35&euro;</div>
-                                </div>
-                            </div>
-                            <div class=carte-menu__anim><i class="fas fa-check"></i></div>
-                        </li>
-                        <li class="carte-menu animation-delay2">
-                            <div class="carte-menu__texte">
-                                <h4>Filet de turbot</h4>
-                                <div class="carte-menu__ligne-basse">
-                                    <div class="carte-menu__ligne-basse--regular">Aux agrumes</div>
-                                    <div class="carte-menu__ligne-basse--prix">44&euro;</div>
-                                </div>
-                            </div>
-                            <div class=carte-menu__anim><i class="fas fa-check"></i></div>
-                        </li>
-                    </ul>
-    
-                    <h4 class="menu-main__sous-titre">DESSERTS</h4>
-                    <div class="menu-main__spacer"></div>
-                    <ul class="menu-main__liste">
-                        <li class="carte-menu">
-                            <div class="carte-menu__texte">
-                                <h4>Paris-Brest</h4>
-                                <div class="carte-menu__ligne-basse">
-                                    <div class="carte-menu__ligne-basse--regular">Revisit&eacute;</div>
-                                    <div class="carte-menu__ligne-basse--prix">18&euro;</div>
-                                </div>
-                            </div>
-                            <div class=carte-menu__anim><i class="fas fa-check"></i></div>
-                        </li>
-                        <li class="carte-menu animation-delay1">
-                            <div class="carte-menu__texte">
-                                <h4>Macaron au chocolat d'exception</h4>
-                                <div class="carte-menu__ligne-basse">
-                                    <div class="carte-menu__ligne-basse--regular">Et glace &agrave; la vanille de Madagascar</div>
-                                    <div class="carte-menu__ligne-basse--prix">22&euro;</div>
-                                </div>
-                            </div>
-                            <div class=carte-menu__anim><i class="fas fa-check"></i></div>
-                        </li>
-                        <li class="carte-menu animation-delay2">
-                            <div class="carte-menu__texte">
-                                <h4>Mousse au chocolat</h4>
-                                <div class="carte-menu__ligne-basse">
-                                    <div class="carte-menu__ligne-basse--regular">Au piment d'Espelette et &agrave; la truffe noire</div>
-                                    <div class="carte-menu__ligne-basse--prix">23&euro;</div>
-                                </div>
-                            </div>
-                            <div class=carte-menu__anim><i class="fas fa-check"></i></div>
-                        </li>
-                    </ul>
-                    <div class="menu-main__button">Commander</div>
-                </div>
-            </div>
-
-            <!--fin du menu1-->
-
-
-            <div id="menu2">
-                <header>
-                    <div class="logo">
-                        <a href="#accueil" class="logo__back-link" onclick="showAccueil()"><i class="fas fa-arrow-left"></i></a>
-                        <img class="logo__logo" src="images/logo/ohmyfood@2x.svg" alt="logo de Ohmyfood"/>
-                    </div>
-                </header>
-    
-                <div class="menu-img center-bg-img img-restaurant2">
-                </div>
-                
-                <div class="menu-main">
-                    <h2 class="menu-main__titre">La note enchant&eacute;e 
-                        <span class="fa-stack">
-                            <i class="fa-stack-1x far fa-heart outer-heart"></i>
-                            <i class=" fa-stack-1x fas fa-heart inside-heart"></i>
-                        </span>
-                    </h2>
-                    <h4 class="menu-main__sous-titre">ENTR&Eacute;ES</h4>
-                    <div class="menu-main__spacer"></div>
-                    <ul class="menu-main__liste">
-                        <li class="carte-menu">
-                            <div class="carte-menu__texte">
-                                <h4>Ravioles de foie gras</h4>
-                                <div class="carte-menu__ligne-basse">
-                                    <div class="carte-menu__ligne-basse--regular">Accompagn&eacute;s de leur cr&egrave;me &agrave; la truffe</div>
-                                    <div class="carte-menu__ligne-basse--prix">25&euro;</div>
-                                </div>
-                            </div>
-                            <div class=carte-menu__anim><i class="fas fa-check"></i></div>
-                        </li>
-                        <li class="carte-menu animation-delay1">
-                            <div class="carte-menu__texte">
-                                <h4>Caviar osci&egrave;tre</h4>
-                                <div class="carte-menu__ligne-basse">
-                                    <div class="carte-menu__ligne-basse--regular">Sur blini &agrave; la farine de bl&eacute; noir</div>
-                                    <div class="carte-menu__ligne-basse--prix">35&euro;</div>
-                                </div>
-                            </div>
-                            <div class=carte-menu__anim><i class="fas fa-check"></i></div>
-                        </li>
-                        <li class="carte-menu animation-delay2">
-                            <div class="carte-menu__texte">
-                                <h4>Homard et espuma de potiron</h4>
-                                <div class="carte-menu__ligne-basse">
-                                    <div class="carte-menu__ligne-basse--regular">Marin&eacute; aux zestes d'orange</div>
-                                    <div class="carte-menu__ligne-basse--prix">20&euro;</div>
-                                </div>
-                            </div>
-                            <div class=carte-menu__anim><i class="fas fa-check"></i></div>
-                        </li>
-                        <li class="carte-menu animation-delay2">
-                            <div class="carte-menu__texte">
-                                <h4>Foie gras de canard cuit entier</h4>
-                                <div class="carte-menu__ligne-basse">
-                                    <div class="carte-menu__ligne-basse--regular">Confiture de figue et pain toast&eacute;</div>
-                                    <div class="carte-menu__ligne-basse--prix">35&euro;</div>
-                                </div>
-                            </div>
-                            <div class=carte-menu__anim><i class="fas fa-check"></i></div>
-                        </li>
-                    </ul>
-    
-                    <h4 class="menu-main__sous-titre">PLATS</h4>
-                    <div class="menu-main__spacer"></div>
-                    <ul class="menu-main__liste">
-                        <li class="carte-menu">
-                            <div class="carte-menu__texte">
-                                <h4>Noix de coquilles Saint-Jacques</h4>
-                                <div class="carte-menu__ligne-basse">
-                                    <div class="carte-menu__ligne-basse--regular">Sur lit de pur&eacute;e de c&eacute;leri-rave</div>
-                                    <div class="carte-menu__ligne-basse--prix">40&euro;</div>
-                                </div>
-                            </div>
-                            <div class=carte-menu__anim><i class="fas fa-check"></i></div>
-                        </li>
-                        <li class="carte-menu animation-delay1">
-                            <div class="carte-menu__texte">
-                                <h4>Langoustine po&ecirc;l&eacute;e</h4>
-                                <div class="carte-menu__ligne-basse">
-                                    <div class="carte-menu__ligne-basse--regular">Pur&eacute;e de patate douce</div>
-                                    <div class="carte-menu__ligne-basse--prix">35&euro;</div>
-                                </div>
-                            </div>
-                            <div class=carte-menu__anim><i class="fas fa-check"></i></div>
-                        </li>
-                        <li class="carte-menu animation-delay2">
-                            <div class="carte-menu__texte">
-                                <h4>Mijot&eacute; de queue de boeuf</h4>
-                                <div class="carte-menu__ligne-basse">
-                                    <div class="carte-menu__ligne-basse--regular">Et riz sauvage aux zestes de citron</div>
-                                    <div class="carte-menu__ligne-basse--prix">44&euro;</div>
-                                </div>
-                            </div>
-                            <div class=carte-menu__anim><i class="fas fa-check"></i></div>
-                        </li>
-                    </ul>
-    
-                    <h4 class="menu-main__sous-titre">DESSERTS</h4>
-                    <div class="menu-main__spacer"></div>
-                    <ul class="menu-main__liste">
-                        <li class="carte-menu">
-                            <div class="carte-menu__texte">
-                                <h4>Macaron noisette et chocolat</h4>
-                                <div class="carte-menu__ligne-basse">
-                                    <div class="carte-menu__ligne-basse--regular">Glace au caramel brun et sel de Gu&eacute;rande</div>
-                                    <div class="carte-menu__ligne-basse--prix">25&euro;</div>
-                                </div>
-                            </div>
-                            <div class=carte-menu__anim><i class="fas fa-check"></i></div>
-                        </li>
-                        <li class="carte-menu animation-delay1">
-                            <div class="carte-menu__texte">
-                                <h4>Baba au rhum revisit&eacute;</h4>
-                                <div class="carte-menu__ligne-basse">
-                                    <div class="carte-menu__ligne-basse--regular">Avec son coulis de citron</div>
-                                    <div class="carte-menu__ligne-basse--prix">22&euro;</div>
-                                </div>
-                            </div>
-                            <div class=carte-menu__anim><i class="fas fa-check"></i></div>
-                        </li>
-                        <li class="carte-menu animation-delay2">
-                            <div class="carte-menu__texte">
-                                <h4>Tarte au citron meringu&eacute;e</h4>
-                                <div class="carte-menu__ligne-basse">
-                                    <div class="carte-menu__ligne-basse--regular">D&eacute;structur&eacute;e</div>
-                                    <div class="carte-menu__ligne-basse--prix">23&euro;</div>
-                                </div>
-                            </div>
-                            <div class=carte-menu__anim><i class="fas fa-check"></i></div>
-                        </li>
-                    </ul>
-                    <div class="menu-main__button">Commander</div>
-                </div>
-            </div>
-
-            <!--Fin du menu2-->
-            <div id="menu3">
-                <header>
-                    <div class="logo">
-                        <a href="#accueil" class="logo__back-link" onclick="showAccueil()"><i class="fas fa-arrow-left"></i></a>
-                        <img class="logo__logo" src="images/logo/ohmyfood@2x.svg" alt="logo de Ohmyfood"/>
-                    </div>
-                </header>
-    
-                <div class="menu-img center-bg-img img-restaurant3">
-                </div>
-                
-                <div class="menu-main">
-                    <h2 class="menu-main__titre">&Agrave; la fran&ccedil;aise
-                        <span class="fa-stack">
-                            <i class="fa-stack-1x far fa-heart outer-heart"></i>
-                            <i class=" fa-stack-1x fas fa-heart inside-heart"></i>
-                        </span>
-                    </h2>
-                    <h4 class="menu-main__sous-titre">ENTR&Eacute;ES</h4>
-                    <div class="menu-main__spacer"></div>
-                    <ul class="menu-main__liste">
-                        <li class="carte-menu">
-                            <div class="carte-menu__texte">
-                                <h4>Tartare de poulpe acidul&eacute;</h4>
-                                <div class="carte-menu__ligne-basse">
-                                    <div class="carte-menu__ligne-basse--regular">Aux zestes d'orange</div>
-                                    <div class="carte-menu__ligne-basse--prix">25&euro;</div>
-                                </div>
-                            </div>
-                            <div class=carte-menu__anim><i class="fas fa-check"></i></div>
-                        </li>
-                        <li class="carte-menu animation-delay1">
-                            <div class="carte-menu__texte">
-                                <h4>Velout&eacute; de l&eacute;gumes d'antan</h4>
-                                <div class="carte-menu__ligne-basse">
-                                    <div class="carte-menu__ligne-basse--regular">Carotte, panais, topinambour</div>
-                                    <div class="carte-menu__ligne-basse--prix">35&euro;</div>
-                                </div>
-                            </div>
-                            <div class=carte-menu__anim><i class="fas fa-check"></i></div>
-                        </li>
-                        <li class="carte-menu animation-delay2">
-                            <div class="carte-menu__texte">
-                                <h4>Soupe &agrave; l'oignon</h4>
-                                <div class="carte-menu__ligne-basse">
-                                    <div class="carte-menu__ligne-basse--regular">Revisit&eacute;e</div>
-                                    <div class="carte-menu__ligne-basse--prix">20&euro;</div>
-                                </div>
-                            </div>
-                            <div class=carte-menu__anim><i class="fas fa-check"></i></div>
-                        </li>
-                    </ul>
-    
-                    <h4 class="menu-main__sous-titre">PLATS</h4>
-                    <div class="menu-main__spacer"></div>
-                    <ul class="menu-main__liste">
-                        <li class="carte-menu">
-                            <div class="carte-menu__texte">
-                                <h4>Coquilles Saint-Jacques</h4>
-                                <div class="carte-menu__ligne-basse">
-                                    <div class="carte-menu__ligne-basse--regular">Accompagn&eacute;es d'une pur&eacute;e de panais</div>
-                                    <div class="carte-menu__ligne-basse--prix">40&euro;</div>
-                                </div>
-                            </div>
-                            <div class=carte-menu__anim><i class="fas fa-check"></i></div>
-                        </li>
-                        <li class="carte-menu animation-delay1">
-                            <div class="carte-menu__texte">
-                                <h4>Magret de canard</h4>
-                                <div class="carte-menu__ligne-basse">
-                                    <div class="carte-menu__ligne-basse--regular">Et parmentier de pommes de terre</div>
-                                    <div class="carte-menu__ligne-basse--prix">35&euro;</div>
-                                </div>
-                            </div>
-                            <div class=carte-menu__anim><i class="fas fa-check"></i></div>
-                        </li>
-                        <li class="carte-menu animation-delay2">
-                            <div class="carte-menu__texte">
-                                <h4>Pigeonneau d’Ille-et-Vilaine</h4>
-                                <div class="carte-menu__ligne-basse">
-                                    <div class="carte-menu__ligne-basse--regular">Sur son lit de gnocchis aux l&eacute;gumes</div>
-                                    <div class="carte-menu__ligne-basse--prix">44&euro;</div>
-                                </div>
-                            </div>
-                            <div class=carte-menu__anim><i class="fas fa-check"></i></div>
-                        </li>
-                    </ul>
-    
-                    <h4 class="menu-main__sous-titre">DESSERTS</h4>
-                    <div class="menu-main__spacer"></div>
-                    <ul class="menu-main__liste">
-                        <li class="carte-menu">
-                            <div class="carte-menu__texte">
-                                <h4>P&eacute;tales de violettes glac&eacute;s</h4>
-                                <div class="carte-menu__ligne-basse">
-                                    <div class="carte-menu__ligne-basse--regular">Et pur&eacute;e de noisettes</div>
-                                    <div class="carte-menu__ligne-basse--prix">18&euro;</div>
-                                </div>
-                            </div>
-                            <div class=carte-menu__anim><i class="fas fa-check"></i></div>
-                        </li>
-                        <li class="carte-menu animation-delay1">
-                            <div class="carte-menu__texte">
-                                <h4>Fondant au chocolat</h4>
-                                <div class="carte-menu__ligne-basse">
-                                    <div class="carte-menu__ligne-basse--regular">Revisit&eacute;</div>
-                                    <div class="carte-menu__ligne-basse--prix">22&euro;</div>
-                                </div>
-                            </div>
-                            <div class=carte-menu__anim><i class="fas fa-check"></i></div>
-                        </li>
-                        <li class="carte-menu animation-delay2">
-                            <div class="carte-menu__texte">
-                                <h4>Millefeuille croustillant</h4>
-                                <div class="carte-menu__ligne-basse">
-                                    <div class="carte-menu__ligne-basse--regular">Myrtilles et p&acirc;te d’amande</div>
-                                    <div class="carte-menu__ligne-basse--prix">23&euro;</div>
-                                </div>
-                            </div>
-                            <div class=carte-menu__anim><i class="fas fa-check"></i></div>
-                        </li>
-                    </ul>
-                    <div class="menu-main__button">Commander</div>
-                </div>
-            </div>
-
-            <!--Fin du menu 3-->
-
-            <div id="menu4">
-                <header>
-                    <div class="logo">
-                        <a href="#accueil" class="logo__back-link" onclick="showAccueil()"><i class="fas fa-arrow-left"></i></a>
-                        <img class="logo__logo" src="images/logo/ohmyfood@2x.svg" alt="logo de Ohmyfood"/>
-                    </div>
-                </header>
-    
-                <div class="menu-img center-bg-img img-restaurant4">
-                </div>
-                
-                <div class="menu-main">
-                    <h2 class="menu-main__titre">Le d&eacute;lice des sens
-                        <span class="fa-stack">
-                            <i class="fa-stack-1x far fa-heart outer-heart"></i>
-                            <i class=" fa-stack-1x fas fa-heart inside-heart"></i>
-                        </span>
-                    </h2>
-                    <h4 class="menu-main__sous-titre">ENTR&Eacute;ES</h4>
-                    <div class="menu-main__spacer"></div>
-                    <ul class="menu-main__liste">
-                        <li class="carte-menu">
-                            <div class="carte-menu__texte">
-                                <h4>Tartare de thon</h4>
-                                <div class="carte-menu__ligne-basse">
-                                    <div class="carte-menu__ligne-basse--regular">Assaisonn&eacute; au yuzu</div>
-                                    <div class="carte-menu__ligne-basse--prix">25&euro;</div>
-                                </div>
-                            </div>
-                            <div class=carte-menu__anim><i class="fas fa-check"></i></div>
-                        </li>
-                        <li class="carte-menu animation-delay1">
-                            <div class="carte-menu__texte">
-                                <h4>Bouch&eacute;e de homard croustillant</h4>
-                                <div class="carte-menu__ligne-basse">
-                                    <div class="carte-menu__ligne-basse--regular">Et sa farandole de petits l&eacute;gumes</div>
-                                    <div class="carte-menu__ligne-basse--prix">35&euro;</div>
-                                </div>
-                            </div>
-                            <div class=carte-menu__anim><i class="fas fa-check"></i></div>
-                        </li>
-                        <li class="carte-menu animation-delay2">
-                            <div class="carte-menu__texte">
-                                <h4>Velout&eacute; de c&egrave;pes</h4>
-                                <div class="carte-menu__ligne-basse">
-                                    <div class="carte-menu__ligne-basse--regular">Aux truffes</div>
-                                    <div class="carte-menu__ligne-basse--prix">20&euro;</div>
-                                </div>
-                            </div>
-                            <div class=carte-menu__anim><i class="fas fa-check"></i></div>
-                        </li>
-                    </ul>
-    
-                    <h4 class="menu-main__sous-titre">PLATS</h4>
-                    <div class="menu-main__spacer"></div>
-                    <ul class="menu-main__liste">
-                        <li class="carte-menu">
-                            <div class="carte-menu__texte">
-                                <h4>Poulet r&ocirc;ti aux herbes de Provence</h4>
-                                <div class="carte-menu__ligne-basse">
-                                    <div class="carte-menu__ligne-basse--regular">Et sa cr&egrave;me de truffe</div>
-                                    <div class="carte-menu__ligne-basse--prix">40&euro;</div>
-                                </div>
-                            </div>
-                            <div class=carte-menu__anim><i class="fas fa-check"></i></div>
-                        </li>
-                        <li class="carte-menu animation-delay1">
-                            <div class="carte-menu__texte">
-                                <h4>Langouste r&ocirc;tie</h4>
-                                <div class="carte-menu__ligne-basse">
-                                    <div class="carte-menu__ligne-basse--regular">Et ses l&eacute;gumes de saison</div>
-                                    <div class="carte-menu__ligne-basse--prix">35&euro;</div>
-                                </div>
-                            </div>
-                            <div class=carte-menu__anim><i class="fas fa-check"></i></div>
-                        </li>
-                        <li class="carte-menu animation-delay2">
-                            <div class="carte-menu__texte">
-                                <h4>C&ocirc;te de boeuf Angus</h4>
-                                <div class="carte-menu__ligne-basse">
-                                    <div class="carte-menu__ligne-basse--regular">Et sa pur&eacute;e de panais</div>
-                                    <div class="carte-menu__ligne-basse--prix">44&euro;</div>
-                                </div>
-                            </div>
-                            <div class=carte-menu__anim><i class="fas fa-check"></i></div>
-                        </li>
-                    </ul>
-    
-                    <h4 class="menu-main__sous-titre">DESSERTS</h4>
-                    <div class="menu-main__spacer"></div>
-                    <ul class="menu-main__liste">
-                        <li class="carte-menu">
-                            <div class="carte-menu__texte">
-                                <h4>Farandole de desserts</h4>
-                                <div class="carte-menu__ligne-basse">
-                                    <div class="carte-menu__ligne-basse--regular">Du chef</div>
-                                    <div class="carte-menu__ligne-basse--prix">18&euro;</div>
-                                </div>
-                            </div>
-                            <div class=carte-menu__anim><i class="fas fa-check"></i></div>
-                        </li>
-                        <li class="carte-menu animation-delay1">
-                            <div class="carte-menu__texte">
-                                <h4>Cr&egrave;me brul&eacute;e</h4>
-                                <div class="carte-menu__ligne-basse">
-                                    <div class="carte-menu__ligne-basse--regular">Revisit&eacute;e</div>
-                                    <div class="carte-menu__ligne-basse--prix">22&euro;</div>
-                                </div>
-                            </div>
-                            <div class=carte-menu__anim><i class="fas fa-check"></i></div>
-                        </li>
-                        <li class="carte-menu animation-delay2">
-                            <div class="carte-menu__texte">
-                                <h4>Tiramisu</h4>
-                                <div class="carte-menu__ligne-basse">
-                                    <div class="carte-menu__ligne-basse--regular">&Agrave; la noisette</div>
-                                    <div class="carte-menu__ligne-basse--prix">23&euro;</div>
-                                </div>
-                            </div>
-                            <div class=carte-menu__anim><i class="fas fa-check"></i></div>
-                        </li>
-                    </ul>
-                    <div class="menu-main__button">Commander</div>
-                </div>
-            </div>
-
-            
-
-
             <footer class="footer">
                 <h2 class="footer__h2">ohmyfood</h2>
                 <ul class="footer__liste">
@@ -655,32 +129,6 @@
                 </ul>
             </footer>
 
-
-            <script>
-                function showMenu1(){
-                    document.getElementById("menu1").style.display = "block";
-                    document.getElementById("accueil").style.display = "none";
-                }
-                function showMenu2(){
-                    document.getElementById("menu2").style.display = "block";
-                    document.getElementById("accueil").style.display = "none";
-                }
-                function showMenu3(){
-                    document.getElementById("menu3").style.display = "block";
-                    document.getElementById("accueil").style.display = "none";
-                }
-                function showMenu4(){
-                    document.getElementById("menu4").style.display = "block";
-                    document.getElementById("accueil").style.display = "none";
-                }
-                function showAccueil(){
-                    document.getElementById("accueil").style.display = "block";
-                    document.getElementById("menu1").style.display = "none";
-                    document.getElementById("menu2").style.display = "none";
-                    document.getElementById("menu3").style.display = "none";
-                    document.getElementById("menu4").style.display = "none";
-                }
-            </script>
         </div>
     </body>
 </html>
