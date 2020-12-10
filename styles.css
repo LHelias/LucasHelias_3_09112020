@@ -45,10 +45,6 @@ a {
   text-decoration: inherit;
 }
 
-#accueil {
-  display: contents;
-}
-
 @keyframes fade-in {
   0% {
     opacity: 0;
@@ -173,7 +169,11 @@ a {
   margin-bottom: 40px;
 }
 .intro__button:active {
-  transform: scale(1.2);
+  transform: scale(1.03);
+}
+.intro__button:hover {
+  background: linear-gradient(170deg, #ff93e1 0%, #a16be0 100%);
+  box-shadow: 0 6px 6px 0px rgba(0, 0, 0, 0.2);
 }
 
 /* début du code de la section fonctionnement*/
@@ -469,7 +469,11 @@ a {
   margin-bottom: 30px;
 }
 .menu-main__button:active {
-  transform: scale(1.2);
+  transform: scale(1.03);
+}
+.menu-main__button:hover {
+  background: linear-gradient(170deg, #ff93e1 0%, #a16be0 100%);
+  box-shadow: 0 6px 6px 0px rgba(0, 0, 0, 0.2);
 }
 
 .nouveau {
